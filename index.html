@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Encryptor</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main">
+        <textarea
+          name=""
+          id="domText"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aquí"
+          class="text-area"
+        ></textarea>
+        <p>Solo letras minúsculas y sin acentos.</p>
+        <button id="encrypt" onclick="encrypt()" class="button" type="submit">
+          Encrypt
+        </button>
+        <button id="decrypt" onclick="decrypt()" class="button" type="submit">
+          Decrypt
+        </button>
+      </section>
+      <section class="show-text">
+        <p id="showText">
+          Solo letras minúsculas y sin acentos.Solo letras minúsculas y sin
+          acentos.Solo letras minúsculas y sin acentos.Solo letras minúsculas y
+          sin acentos.
+        </p>
+        <button id="copy" onclick="copy()" class="button" type="submit">
+          Copiar
+        </button>
+      </section>
+    </main>
+    <footer>
+      <p>Developed by David Cassiet</p>
+    </footer>
+    <script src="encryptor.js"></script>
+  </body>
+</html>
