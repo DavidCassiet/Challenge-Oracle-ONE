@@ -44,12 +44,12 @@ function decrypt() {
 }
 
 function showText(value, text) {
-  return (value.innerHTML = text);
+  return (value.textContent = text);
 }
 
 function copy() {
-  let text2 = document.getElementById("domText");
-  let text = document.getElementById("showText").innerText;
+  let textDom = document.getElementById("domText");
+  let text = document.getElementById("showText").innerHTML;
 
-  showText(text2, text);
+  textDom.value = text;
 }
