@@ -7,7 +7,6 @@ body {
 }
 
 main {
-  /* background-color: rgba(73, 193, 209, 0.097); */
   background-color: rgba(0, 0, 0, 0.392);
   width: 100%;
   text-align: center;
@@ -15,7 +14,6 @@ main {
 }
 
 .main {
-  /* background-color: rgba(255, 192, 203, 0.084); */
   text-align: center;
   display: inline-block;
   margin: 50px 20px 50px auto;
@@ -25,13 +23,29 @@ main {
   position: relative;
 }
 
-/* .input-container {
-} */
+.input-container .clearButton {
+  background: none;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.input-container .clearButton:hover {
+  background-color: rgba(255, 81, 81, 0.4);
+  cursor: pointer;
+}
 
 .text-area {
   background: none;
   color: #ffffff;
-  width: 400px;
+  width: 460px;
   min-height: 400px;
   padding: 10px;
   margin: 10% auto;
@@ -86,7 +100,7 @@ main {
   word-wrap: break-word;
 }
 
-.button {
+.button-container .button {
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   width: 200px;
@@ -98,7 +112,7 @@ main {
   transition: 0.3s ease-in-out;
 }
 
-button:hover {
+.button-container .button:hover {
   background-color: rgba(81, 81, 255, 0.4);
   box-shadow: 0px 0px 10px rgba(0, 255, 255, 40);
   cursor: pointer;

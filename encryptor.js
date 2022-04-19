@@ -53,3 +53,9 @@ function copy() {
 
   textDom.value = text;
 }
+
+function clearInput() {
+  let textDom = document.getElementById("domText");
+
+  textDom.value = "";
+}
