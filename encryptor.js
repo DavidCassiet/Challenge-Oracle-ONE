@@ -48,14 +48,19 @@ function showText(value, text) {
 }
 
 function copy() {
-  let textDom = document.getElementById("domText");
-  let text = document.getElementById("showText").innerHTML;
-
-  textDom.value = text;
+  let textDommm = document.getElementById("showText");
+  textDommm.select();
+  document.execCommand("copy");
 }
 
 function clearInput() {
   let textDom = document.getElementById("domText");
-
   textDom.value = "";
 }
+
+// function copy() {
+//   let textDom = document.getElementById("domText");
+//   let text = document.getElementById("showText").innerHTML;
+
+//   textDom.value = text;
+// }
