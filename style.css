@@ -46,7 +46,7 @@ main {
   background: none;
   color: #ffffff;
   width: 460px;
-  min-height: 400px;
+  height: 400px;
   padding: 10px;
   margin: 10% auto;
   resize: none;
@@ -60,7 +60,7 @@ main {
 
 .text-area::placeholder {
   color: #ffffff;
-  min-height: 400px;
+  height: 400px;
 }
 
 .button-container {
@@ -78,7 +78,7 @@ main {
   display: inline-block;
   margin: 50px auto 50px 20px;
   width: 400px;
-  min-height: 600px;
+  height: 600px;
   position: relative;
   border: 1px solid rgb(0, 255, 255);
   border-radius: 24px;
@@ -87,17 +87,17 @@ main {
 
 .text-container {
   width: 340px;
-  min-height: 400px;
+  height: 400px;
   margin: 6% auto 0;
   /* padding: 10px 10px 100px; */
   /* padding-bottom: 100px; */
 }
 
-.text-container textarea {
+.text-container .show-textarea {
   background: none;
   color: #ffffff;
   width: 340px;
-  min-height: 500px;
+  height: 500px;
   /* padding: 10px; */
   /* margin: 10% auto; */
   resize: none;
@@ -106,7 +106,7 @@ main {
   font-size: 18px;
 }
 
-.text-container textarea:focus {
+.text-container .show-textarea:focus {
   outline: none;
   border: none;
 }
@@ -175,25 +175,54 @@ footer img {
   margin-top: 10px;
 }
 
-/* @media screen and (max-width: 480px) {
-  .main,
-  .show-text {
-    width: auto;
-    height: 300px;
+@media screen and (max-width: 480px) {
+  .main {
+    width: 342px;
+    height: 400px;
+    margin: 20px auto;
   }
 
-  .text-area,
-  .show-text p {
-    width: 200px;
-    height: 200px;
+  .input-container {
+    width: 342px;
+    margin: 20px auto;
   }
+  
 
   .button {
+    width: 100px;
+    height: 30px;
+  }
+
+  .text-area {
+    width: 320px;
+    height: 160px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .show-text p {
+    
+  }
+
+  .show-text {
     width: auto;
+    height: 240px;
+    margin: 20px auto;
+  }
+
+  .text-container {
+    height: 250px;
+    margin: 0;
+  }
+
+  .text-container .show-textarea {
+    width: 280px;
+    height: 140px;
+    margin: 10px auto;
+    font: 12px;
   }
 
   footer {
-    padding: 5px;
+    padding: 5px 0;
   }
   footer img {
     width: 60px;
@@ -201,4 +230,4 @@ footer img {
   .copyright {
     margin: 5px;
   }
-} */
+}
