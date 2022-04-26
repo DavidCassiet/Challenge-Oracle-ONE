@@ -1,5 +1,5 @@
 body {
-  background: url(media/background.jpg) center top / cover no-repeat fixed;
+  background: url(../media/background.jpg) center top / cover no-repeat fixed;
   backdrop-filter: blur(4px);
   display: flex;
   min-height: 100vh;
