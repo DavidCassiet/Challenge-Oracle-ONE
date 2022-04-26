@@ -26,17 +26,26 @@ function encrypt() {
     }
     animation();
     showText(result, encryptedText);
-  } else {
-    return alert("Por favor ingrese un texto valido");
   }
 }
 
 function decrypt() {
-  if (validate(textDom.value)) {
+  let text = textDom.value;
+
+  if (validate(text)) {
     animation();
-    showText(result, decryptText(textDom.value));
-  } else {
-    return alert("Por favor ingrese un texto valido");
+    const dictionary = {
+      a: /ai/g,
+      e: /enter/g,
+      i: /imes/g,
+      o: /ober/g,
+      u: /ufat/g,
+    };
+
+    for (const [key, value] of Object.entries(dictionary)) {
+      text = text.replace(value, key);
+    }
+    showText(result, text);
   }
 }
 
@@ -55,21 +64,6 @@ function animation() {
   }, 1100);
 }
 
-function decryptText(text) {
-  const dictionary = {
-    a: /ai/g,
-    e: /enter/g,
-    i: /imes/g,
-    o: /ober/g,
-    u: /ufat/g,
-  };
-
-  for (const [key, value] of Object.entries(dictionary)) {
-    text = text.replace(value, key);
-  }
-  return text;
-}
-
 function validate(text) {
   let isValid = true;
 
@@ -78,18 +72,19 @@ function validate(text) {
       let letter = text[i];
       let newLetter = letter.normalize("NFD").replace(/[\u0300-\u036f]/, "");
       if (letter != letter.toLowerCase() || letter != newLetter) {
+        invalidText();
         isValid = false;
-        break;
       }
     }
   } else {
+    emptyText();
     isValid = false;
   }
   return isValid;
 }
 
 function showText(element, text) {
-  return (element.textContent = text);
+  return (element.value = text);
 }
 
 function copy() {
@@ -98,5 +93,5 @@ function copy() {
 }
 
 function clearInput() {
-  textDom.value = "";
+  showText(textDom, "");
 }
